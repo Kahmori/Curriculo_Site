@@ -22,31 +22,31 @@ function Contato() {
           
         </div>
         <div id={styles.formGroup}>
-          <form action="">
+          <form action="" id='contactForm'>
             <div className={styles.row}>
               <div>
-                <label htmlFor="">Nome</label>
-                <input type="text" />
+                <label htmlFor="nome">Nome</label>
+                <input id='name' type="text" />
               </div>
               <div>
-                <label htmlFor="">Sobrenome</label>
-                <input type="text" />
+                <label htmlFor="sobrenome">Sobrenome</label>
+                <input id='surname' type="text" />
               </div>
             </div>
             <div className={styles.row}>
               <div>
-                <label htmlFor="">E-mail</label>
-                <input type="text"/>
+                <label htmlFor="email">E-mail</label>
+                <input id='email' type="email"/>
               </div>
               <div>
                 <label htmlFor="">Assunto</label>
-                <input type="text"/>
+                <input id='subject' type="text"/>
               </div>
             </div>
             <div className={styles.row}>
               <div className={styles.flex}>
-                <label htmlFor="">Mensagem</label>
-                <textarea />
+                <label htmlFor="mensagem">Mensagem</label>
+                <textarea id='message'/>
               </div>
               <button type="submit">Enviar</button>
             </div>

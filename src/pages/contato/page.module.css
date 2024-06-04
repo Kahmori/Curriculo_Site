@@ -35,6 +35,8 @@
 }
 
 #formGroup input{
+  font-family: 'PoppinsRegular';
+  font-size: 1em;
   width: 14rem;
   height: 2rem;
   margin-top: 0.25rem;
@@ -43,11 +45,14 @@
 }
 
 #formGroup textarea{
+  font-family: 'PoppinsRegular';
+  font-size: 1em;
   width: 14rem;
   height: 9rem;
   margin-top: 0.25rem;
   border-radius: 1rem;
   padding: 0 1rem; /*until i havent the labels*/
+  padding-top: 0.5rem;
 }
 
 #formGroup label{
