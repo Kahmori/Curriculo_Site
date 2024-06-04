@@ -1,0 +1,94 @@
+/*Homepage*/
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap-reverse;
+  gap: 4rem;
+  padding: 4rem 0 7.5rem 0;
+}
+
+#profilePic{
+  width: 35rem;
+  min-width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+  background-color: blueviolet;
+}
+
+.infoGroup{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.circleGroup{
+  display: flex;
+  gap: 1rem;
+}
+
+.navCircles{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  font-family: 'PoppinsBold';
+  font-size: 1.5em;
+  color: #000;
+  text-align: center;
+  align-content: center;
+  margin-top: 2rem;
+  border: 1px solid #000;
+}
+
+#circle1{
+  background-color: blue;
+}
+
+#circle2{
+  background-color: greenyellow;
+}
+
+#circle3{
+  background-color: red;
+}
+
+#circle1:hover, 
+#circle2:hover, 
+#circle3:hover{
+  background-color: rgb(214, 219, 220);
+  scale: 1.125;
+}
+
+#greeting{
+  font-family: 'PoppinsBold';
+  font-size: 5em;
+}
+
+#title{
+  font-family: 'PoppinsMedium';
+  font-size: 1.75em;
+}
+
+#brefBlock{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+.bref{
+  font-family: 'PoppinsRegular';
+  font-size: 1.5em;
+  text-wrap: wrap;
+  max-width: 35rem;
+  text-align: justify;
+}
+
+@media screen and (max-width:750px) {
+  .main{
+    scale: 0.8;
+    padding: 0rem 0 4.5rem 0;
+    margin-top: -4rem;
+  }
+}

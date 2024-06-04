@@ -1,0 +1,53 @@
+#curriculoBanner{
+  margin: 7rem 10rem 10rem 10rem;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 4rem 0;
+}
+
+#differentGrid{
+  grid-template-columns: 1fr 1fr;
+}
+
+#pageTitle{
+  font-family: 'PoppinsMedium';
+  font-size: 3em;
+  margin-bottom: 5rem;
+}
+
+.sectionTitle{
+  font-family: 'PoppinsMedium';
+  font-size: 1.65rem;
+  max-width: 15rem;
+}
+
+.paragraphTitle{
+  font-family: 'PoppinsMedium';
+  font-size: 1.125em;
+}
+
+.normalText{
+  font-family: 'PoppinsLight';
+  font-size: 1em;
+}
+
+.flex{
+  display: flex;
+  margin-top: 0.75rem;
+}
+
+.period{
+  min-width: fit-content;
+  margin-right: 3rem;
+}
+
+.blockGap{
+  margin-bottom: 2rem;
+}
+
+.grid li{
+  margin: 2rem 0;
+}
