@@ -75,3 +75,26 @@
   display: flex;
   flex-direction: column;
 }
+
+@media screen and (max-width: 1150px) {
+  #contatoBanner{
+    margin: 7rem 5rem 9rem 5rem !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contatoBanner{
+    display: flex;
+    flex-direction: column;
+    margin: 7rem 20% 9rem 20% !important;
+  }
+
+  .row{
+    flex-direction: column;
+  }
+
+  .row div{
+    display: flex;
+    flex-direction: column;
+  }
+}
