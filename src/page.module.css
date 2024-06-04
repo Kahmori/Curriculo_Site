@@ -25,7 +25,8 @@
 
 .circleGroup{
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
+  justify-content: center;
 }
 
 .navCircles{
@@ -42,7 +43,7 @@
 }
 
 #circle1{
-  background-color: blue;
+  background-color: rgb(188, 188, 255); /*rgb(161, 161, 253)*/
 }
 
 #circle2{
@@ -50,7 +51,7 @@
 }
 
 #circle3{
-  background-color: red;
+  background-color: rgb(253, 192, 192);
 }
 
 #circle1:hover, 

@@ -39,7 +39,8 @@
     min-width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background-color: #62db0b;
+    border: 1px solid black;
+    background-color: #b2ed88;  /*#62db0b*/
 }
 
 @media screen and (max-width: 1000px) {
