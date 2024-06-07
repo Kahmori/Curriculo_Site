@@ -1,6 +1,5 @@
-const nodemailer = require('nodemailer');
-
 export default async function handler(req, res) {
+    const nodemailer = require('nodemailer');
     if (req.method === 'POST') {
         const { name, email, subject, message } = req.body;
 
