@@ -1,48 +1,39 @@
-import React, {useState} from 'react';
+import React, {useRef} from 'react';
 import styles from './page.module.css';
-//import enviarEmail from './logic.js';
+
+import emailjs from '@emailjs/browser';
 
 function Contato() {
-  /*useEffect(() => {
-    enviarEmail()
-   }, []); */
+  
+  const form = useRef();
+  const nameRef = useRef();
+  const surnameRef = useRef();
+  const subjectRef = useRef();
+  const emailRef = useRef();
+  const messageRef = useRef();
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log('Formulário de contato submetido');
+    emailjs
+      .sendForm('service_2kve9ts', 'template_fd1hz6e', form.current, {
+        publicKey: 'SpLeMxfW6bnAPssk6',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          console.log("message sent");
 
-    const formData = { name, email, subject, message };
-    console.log('Dados do formulário:', formData);
-
-    fetch('/api/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Resposta do backend:', data);
-      if (data.message) {
-        alert('Email enviado com sucesso!');
-        setName('');
-        setEmail('');
-        setSubject('');
-        setMessage('');
-      } else {
-        alert('Falha ao enviar email');
-      }
-    })
-    .catch(error => {
-      console.error('Erro:', error);
-      alert('Falha ao enviar email');
-    });
+          nameRef.current.value = '';
+          surnameRef.current.value = '';
+          subjectRef.current.value = '';
+          emailRef.current.value = '';
+          messageRef.current.value = '';
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
   };
 
   return (
@@ -65,33 +56,33 @@ function Contato() {
           
         </div>
         <div id={styles.formGroup}>
-          <form action="" id='contactForm'>
+        <form action="" id='contactForm' ref={form} onSubmit={sendEmail}>
             <div className={styles.row}>
               <div>
                 <label htmlFor="nome">Nome</label>
-                <input id='name' type="text" value={name} onChange={(e) => setName(e.target.value)}/>
+                <input id='name' type="text" name="name" ref={nameRef}/>
               </div>
               <div>
                 <label htmlFor="sobrenome">Sobrenome</label>
-                <input id='surname' type="text" />
+                <input id='surname' type="text" name="surname" ref={surnameRef}/>
               </div>
             </div>
             <div className={styles.row}>
               <div>
                 <label htmlFor="email">E-mail</label>
-                <input id='email' type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <input id='email' type="email" name="email" ref={emailRef}/>
               </div>
               <div>
                 <label htmlFor="">Assunto</label>
-                <input id='subject' type="text" value={subject} onChange={(e) => setSubject(e.target.value)}/>
+                <input id='subject' type="text" name="subject" ref={subjectRef}/>
               </div>
             </div>
             <div className={styles.row}>
               <div className={styles.flex}>
                 <label htmlFor="mensagem">Mensagem</label>
-                <textarea id='message' value={message} onChange={(e) => setMessage(e.target.value)}/>
+                <textarea id='message' name="message" ref={messageRef}/>
               </div>
-              <button type="submit">Enviar</button>
+              <button type="submit" value="Send">Enviar</button>
             </div>
           </form>
         </div>
