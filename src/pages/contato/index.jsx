@@ -21,7 +21,7 @@ function Contato() {
       })
       .then(
         () => {
-          alert(`Sua mensagem foi enviada com sucesso!\nKelly agradece por seu contato :)`); 
+          alert(`Sua mensagem foi enviada com sucesso!\nKelly agradece por seu contato :)`);
           console.log('SUCCESS!');
           console.log("message sent");
 
@@ -32,7 +32,7 @@ function Contato() {
           messageRef.current.value = '';
         },
         (error) => {
-          alert(`Ocorreu um erro, por favor, tente novamente!`); 
+          alert(`Ocorreu um erro, por favor, tente novamente!`);
           console.log('FAILED...', error.text);
         },
       );
