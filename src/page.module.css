@@ -43,21 +43,21 @@
 }
 
 #circle1{
-  background-color: rgb(188, 188, 255); /*rgb(161, 161, 253)*/
+  background-color: #b2ed88; /*rgb(188, 188, 255); rgb(161, 161, 253)*/
 }
 
 #circle2{
-  background-color: greenyellow;
+  background-color: #b2ed88; /*greenyellow;*/
 }
 
 #circle3{
-  background-color: rgb(253, 192, 192);
+  background-color: #b2ed88; /*rgb(253, 192, 192);*/
 }
 
 #circle1:hover, 
 #circle2:hover, 
 #circle3:hover{
-  background-color: rgb(214, 219, 220);
+  background-color: #62db0b; /*rgb(214, 219, 220);*/
   scale: 1.125;
 }
 
