@@ -1,6 +1,6 @@
 
 import styles from "./page.module.css";
-import picture from "./assets/pic1.jpg";
+import picture from "./assets/pic2.jpg";
 
 export default function App() {
   return (
